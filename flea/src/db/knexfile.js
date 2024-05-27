@@ -5,12 +5,14 @@ require('dotenv').config({
     path: path.join(__dirname + '/.env'),
 });
 
-console.log(process.env.POSTGRES_USER);
+console.log(process.env.DB_USER);
+console.log(process.env.POSTGRES_DB);
+console.log("走ってますか〜〜〜〜");
 module.exports = {
     development: {
         client: 'pg',
         connection: {
-            user: process.env.POSTGRES_USER || 'user',
+            user: undefined,
             database: process.env.POSTGRES_DB || 'fleamarket',
         },
         migrations: {
