@@ -13,7 +13,7 @@ export const Upload = (props) => {
 
   return (
     <div className="menu_box">
-        <a className="btn btn_clMain_common btn_service_order" data-turbo="false" href="/seller">
+        <a className="btn btn_clMain_common btn_service_order" href="/seller">
         <img src={reactLogo} alt="React logo" />
             
             出品する
