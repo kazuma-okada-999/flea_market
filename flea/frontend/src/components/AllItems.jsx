@@ -40,7 +40,7 @@ export const AllItems = (props) => {
           <a>
             <div className="detail">
               <div className="img_wrap">
-                <img />
+                <img src={itemObj.img_url}/>
                 <div className="priceBox">
                   <span className="txt_price">{`¥ ${Math.trunc(itemObj.sell_price)}`}</span>
                 </div>
