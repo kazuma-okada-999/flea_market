@@ -1,4 +1,5 @@
 import { React, useRef } from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import reactLogo from '../assets/react.svg'
 
 // import {ReactLogo} from '../assets/react.svg';
@@ -13,11 +14,13 @@ export const Upload = (props) => {
 
   return (
     <div className="menu_box">
-        <a className="btn btn_clMain_common btn_service_order" href="/seller">
+        {/* <a className="btn btn_clMain_common btn_service_order" href="/seller">
+        </a> */}
+        <Link to="/seller" className="btn btn_clMain_common btn_service_order">
         <img src={reactLogo} alt="React logo" />
-            
             出品する
-        </a>
+            </Link>
+            
     </div>
   );
 };

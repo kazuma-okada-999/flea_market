@@ -13,8 +13,7 @@ const PORT = process.env.PORT || 8080;
 const test = ["こんにちわ"];
 
 app.use("/", express.static(path.join(__dirname, "../frontend/dist")));
-// app.use("/", express.static(path.join(__dirname, '../frontend/dist')));
-// app.use("/", express.static(__dirname + '../frontend/dist'));
+
 
 app.get("/items", async (req, res) => {
     try {
@@ -26,6 +25,10 @@ app.get("/items", async (req, res) => {
         res.status(500).json({ error: "Internal server error" });
       }
 });
+
+// app.get("/seller", (req, res) => {
+  
+// })
 
 app.listen(PORT, () => {
   console.log(`I am now waiting for incoming HTTP traffic on port ${PORT}!`);

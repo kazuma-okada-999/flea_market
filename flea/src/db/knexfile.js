@@ -6,14 +6,13 @@ require('dotenv').config({
 });
 
 console.log(process.env.DB_USER);
-console.log(process.env.POSTGRES_DB);
-console.log("走ってますか〜〜〜〜");
+
 module.exports = {
     development: {
         client: 'pg',
         connection: {
-            user: undefined,
-            database: process.env.POSTGRES_DB || 'fleamarket',
+            user: process.env.DB_USER || 'user',
+            database: process.env.DB_NAME || 'fleamarket',
         },
         migrations: {
             directory: './data/migrations',

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
 import "./App.css";
 import { AllItems } from "./components/AllItems.jsx";
 import { SingleItem } from "./components/SingleItem.jsx";
 import { Navbar } from "./components/Navbar.jsx";
+import { Seller } from "./components/Seller.jsx";
 
 function App() {
   const [currentView, setCurrentView] = useState("AllItems");
@@ -18,23 +20,23 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("HIIiidididi!!!!")
+    console.log("HIIiidididi!!!!");
     fetch("http://localhost:8080/items")
-      .then(res => res.json())
-      .then(res => setItems(res))
-      .catch(err => console.error(err))
-  },[])
+      .then((res) => res.json())
+      .then((res) => setItems(res))
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <>
-      <h1>DIG フリーマーケット</h1>
-      <Navbar moveHome={setCurrentView} refresh={setRefresh} />
-      {/* {currentView === "AllItems" ? (
-        <AllItems items={items} handleClick={handleClick} />
-      ) : (
-        <SingleItem item={selectedItem} />
-      )} */}
-        <AllItems items={items} handleClick={handleClick} />
+      <BrowserRouter>
+        <h1>DIG フリーマーケット</h1>
+        <Navbar moveHome={setCurrentView} refresh={setRefresh} />
+        <Routes>
+          <Route path="/" element={<AllItems items={items} handleClick={handleClick} />} />
+          <Route path="/seller" element={<Seller />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
