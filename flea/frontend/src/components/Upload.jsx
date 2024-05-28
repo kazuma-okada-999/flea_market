@@ -14,8 +14,6 @@ export const Upload = (props) => {
 
   return (
     <div className="menu_box">
-        {/* <a className="btn btn_clMain_common btn_service_order" href="/seller">
-        </a> */}
         <Link to="/seller" className="btn btn_clMain_common btn_service_order">
         <img src={reactLogo} alt="React logo" />
             出品する

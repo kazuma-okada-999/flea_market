@@ -5,8 +5,6 @@ require('dotenv').config({
     path: path.join(__dirname + '/.env'),
 });
 
-console.log(process.env.DB_USER);
-
 module.exports = {
     development: {
         client: 'pg',

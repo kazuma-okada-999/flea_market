@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { AllItems } from "./components/AllItems.jsx";
 import { SingleItem } from "./components/SingleItem.jsx";
@@ -20,7 +18,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("HIIiidididi!!!!");
     fetch("http://localhost:8080/items")
       .then((res) => res.json())
       .then((res) => setItems(res))

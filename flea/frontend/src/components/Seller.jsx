@@ -29,26 +29,10 @@ export const Seller = (props) => {
       console.log("Image uploaded:", response.data);
       setImgUrl(response.data.url)
     } catch (error) {
-      console.error("Error uploading image:", error);
+      console.error("エラー内容:", error);
     }
   };
 
-  // const formData = new FormData();
-  // formData.append("image", selectedFile);
-  // console.log(formData);
-  //     try {
-  //       const response = await fetch("/upload", {
-  //         method: "POST",
-  //         body: formData,
-  //       });
-
-  //       const result = await response.json();
-  //       console.log("Image uploaded:", result);
-  //       setImgUrl(result.url);
-  //     } catch (error) {
-  //       console.error("Error uploading image:", error);
-  //     }
-  //   };
 
   useEffect(() => {
     if (selectedFile) {

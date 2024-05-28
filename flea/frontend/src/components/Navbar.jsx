@@ -18,56 +18,6 @@ export const Navbar = (props) => {
           method="get"
         >
           <input
-            id="hiddenCategoryId"
-            autoComplete="off"
-            type="hidden"
-            name="category_id"
-          ></input>
-          <input
-            value=""
-            id="hiddenMemberStatus"
-            autoComplete="off"
-            type="hidden"
-            name="member_status"
-          ></input>
-          <input
-            value=""
-            id="hiddenSort"
-            autoComplete="off"
-            type="hidden"
-            name="sort_key"
-          ></input>
-          <input
-            id="hiddenSellerUid"
-            autoComplete="off"
-            type="hidden"
-            name="seller_uid"
-          ></input>
-          <input
-            id="hiddenMinPrice"
-            autoComplete="off"
-            type="hidden"
-            name="min_price"
-          ></input>
-          <input
-            id="hiddenMaxPrice"
-            autoComplete="off"
-            type="hidden"
-            name="max_price"
-          ></input>
-          <input
-            id="hiddenNowOnSale"
-            autoComplete="off"
-            type="hidden"
-            name="now_on_sale"
-          ></input>
-          <input
-            id="hiddenShippingIncluded"
-            autoComplete="off"
-            type="hidden"
-            name="shipping_included"
-          ></input>
-          <input
             type="search"
             id="keyword"
             name="keyword"
